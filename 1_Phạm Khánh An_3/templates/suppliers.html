@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suppliers from Web Api</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>List of Suppliers</h1>
+    <form action="" method="post">
+        <table class="supplier">
+            <thead>
+            <tr>
+                <th>id</th> <th>name</th> <th>email</th> <th>pass</th> <th>Tel</th> <th>Total Employee</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for supplier in suppliers %}
+                <tr>
+                    <td>{{ supplier["SupplierId"] }}</td>
+                    <td>{{ supplier["SupplierName"] }}</td>
+                    <td>{{ supplier["EmailAddress"] }}</td>
+                    <td>{{ supplier["Password"] }}</td>
+                    <td>{{ supplier["Tel"] }}</td>
+                    <td>{{ supplier["TotalEmployee"] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

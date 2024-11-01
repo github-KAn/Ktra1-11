@@ -1,6 +1,4 @@
 #a
-from asyncio import timeout
-from importlib.metadata import files
 
 from flask import Flask, request,jsonify
 import sqlite3,json
@@ -66,6 +64,25 @@ def update_Supplier():
     supplier_pass = request.json.get("pass")
     supplier_Tel = request.json.get("tel")
     supplier_TotalE = request.json.get("totalE")
-    if
+    #check if supplier_ID supplier_name and supplier_email are valid
+    if (suppplier_ID and supplier_name and supplier_email):
+        cur.execute("UPDATE Supplier SET suppplier_ID =? supplier_name =? supplier_email =? "
+                    "supplier_pass =? supplier_Tel =? supplier_TotalE =? ",(suppplier_ID,supplier_name,supplier_email,supplier_pass,supplier_Tel,supplier_TotalE))
+        conn.commit()
+        # get the id of the updated supplier
+        suppplier_id =suppplier_ID
+        return jsonify(suppplier_id)
+    else:
+        return "invalid data"
+# @app.route("/Supplier/exist",methods=["GET"])
+# def exist_Supplier():
+#     #Tạo kết nối tới CSDL
+#     conn = sqlite3.connect(dbname, timeout=200)
+#     cur = conn.cursor()
+#     #Lấy EmailAddress và Password từ Request
+#     suppplier_email = request.json.get("email")
+#     supplier_pass = request.json.get("pass")
+#     #Lấy supplier từ Supplier2 (Supplier2 là bảng mới và có thêm trưòng AccountName)
+#     cur.execute("Select * FROM Supplier2 where suppplier_email=? AND supplier"
 if __name__=="__main__":
     app.run(debug=True,port=5000)
