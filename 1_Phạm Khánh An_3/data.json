@@ -1,0 +1,47 @@
+[
+    {
+        "AccountName": "Supplier1",
+        "EmailAddress": "supplier1@email.com",
+        "Password": "password1",
+        "SupplierId": 1,
+        "SupplierName": "Supplier1",
+        "Tel": "123456789",
+        "TotalEmployee": 50
+    },
+    {
+        "AccountName": "Supplier2",
+        "EmailAddress": "supplier2@email.com",
+        "Password": "password2",
+        "SupplierId": 2,
+        "SupplierName": "Supplier2",
+        "Tel": "987654321",
+        "TotalEmployee": 30
+    },
+    {
+        "AccountName": "Supplier3",
+        "EmailAddress": "supplier3@email.com",
+        "Password": "password3",
+        "SupplierId": 3,
+        "SupplierName": "Supplier3",
+        "Tel": "555555555",
+        "TotalEmployee": 25
+    },
+    {
+        "AccountName": "Supplier4",
+        "EmailAddress": "supplier4@email.com",
+        "Password": "password4",
+        "SupplierId": 4,
+        "SupplierName": "Supplier4",
+        "Tel": "111111111",
+        "TotalEmployee": 15
+    },
+    {
+        "AccountName": "Supplier5",
+        "EmailAddress": "supplier5@email.com",
+        "Password": "password5",
+        "SupplierId": 5,
+        "SupplierName": "Supplier5",
+        "Tel": "999999999",
+        "TotalEmployee": 40
+    }
+]
